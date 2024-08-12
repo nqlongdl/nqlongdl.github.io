@@ -5,7 +5,7 @@ description: fragments 索引页
 keywords: fragments
 comments: false
 mermaid: false
-menu: 片段
+menu: Fragments
 permalink: /fragments/
 ---
 
