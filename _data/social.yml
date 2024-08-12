@@ -1,6 +1,10 @@
 - sitename: GitHub
-  name: mzlogin
-  url: https://github.com/mzlogin
+  name: nqlongdl
+  url: https://github.com/nqlongdl
+
+- sitename: GitHub Secondary Account
+  name: mbfibat
+  url: https://github.com/mbfibat
 
 - sitename: LinkedIn
   name: Long Nguyen
