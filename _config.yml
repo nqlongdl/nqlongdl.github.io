@@ -27,7 +27,7 @@ components:
     word_count:
         enabled: true
     qrcode:
-        enabled: true
+        enabled: false
         image_alt: 闷骚的程序员
     wiki:
         view: cate
