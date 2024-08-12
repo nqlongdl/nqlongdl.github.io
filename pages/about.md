@@ -1,20 +1,18 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: Just something about myself
+keywords: Long Nguyen
 comments: true
 menu: About
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+My name is Long Nguyen, just a guys who wants to have fun with computers.
 
-仰慕「优雅编码的艺术」。
+I always strive for things that are fun and exciting.
 
-坚信熟能生巧，努力改变人生。
-
-## 联系
+## Connection
 
 <ul>
 {% for website in site.data.social %}
