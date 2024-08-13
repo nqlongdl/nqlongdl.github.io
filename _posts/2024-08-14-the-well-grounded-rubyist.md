@@ -1,0 +1,77 @@
+---
+layout: post
+title: Summary for book The Well-Grounded Rubyist
+categories: [Book, Blog]
+description: Book reading
+keywords: Book, Blog
+mermaid: false
+sequence: false
+flow: false
+mathjax: false
+mindmap: false
+mindmap2: false
+---
+
+Context: So I have been able to code in Ruby because work requires it, but I found out that most of time, I just:
+- Try to find, copy and change a piece of code in the code base with the same functionality that satisfy the product requirement.
+- Use ChatGPT / Copilot to helps me finish up the code idea, review code and writing test.
+- Haven't fully understand or utilized any great thing about RUby.
+
+That's why, I try to pick up a book about it, usually I just ask Reddit or something similar, [reference link](https://www.reddit.com/r/ruby/comments/w0ipu2/book_recommendation_to_start_ruby/). One person recommend reading "The Well-Grounded Rubyist", so I thought why don't I give it at try.
+
+So this blog will mostly summarize the content of the book, and try to do as much exercise as possible.
+
+---
+# Part 1: Ruby foundations
+## Chapter 1: Bootstraping your Ruby literacy
+### 1.1 Basic Ruby Language literacy
+Ruby is the interpreter, Ruby is the language \
+Use irb to mess around \
+identifier tree:
+- variables
+  - local: local variable used in a scope
+  - instance: instance variable of object, prefix with @
+  - class: class variable for class, prefix with @@
+  - global: global variable, prefix with $ \
+- constants: constants follow all cap underscore convention.
+- keywords: stuff like `def`, `if` and `__file__`
+- methods names: follow same rules and conventions as local variables (but can end with `?`, `!`, `=`)
+
+Usually local, instance and class all follow camel_case convention, global follow all caps underscore convention.
+
+Objects are instance of class. \
+Object can use methods, for example: `an_object.a_method`. It can be called "sending a message from the right side of dot to the object on the left side of the dot. \
+Methods call don't need parentheses if it's called with no params. \
+Some methods doesn't need the dot, for example: `puts "Hello"`
+
+Use `puts` to output to stdout \
+Use `gets` to input from stdin \
+Use `value = File.read("file_name")` to read from file \
+Use `file_out = File.new("file_name", "w")` to create a file with the mode w, then we can further proceed with `file_out.puts` or `file_out.print`, and finally, `file_out.close`. This is mostly the same with file operation in other language.
+
+#### Exercises
+
+##### Exercise 1
+```ruby
+puts "Reading Celsius temperature value from data file..."
+num = File.read("temp.dat")
+celsius = num.to_i
+fahrenheit = (celsius * 9 / 5) + 32
+print "Saving result to output file 'temp.out'"
+fh = File.open("temp.out", 'w')
+fh.puts(fahrenheit)
+fh.close
+```
+##### Exercise 2
+```ruby
+puts "Reading Fahrenheit temperature value from data file..."
+num = File.read("temp.dat")
+fahrenheit = num.to_i
+celsius = (fahrenheit - 32) * 5 / 9
+print "Saving result to output file 'temp.out'"
+fh = File.open("temp.out", 'w')
+fh.puts(celsius)
+fh.close
+```
+
+### 1.2 Anatomy of the Ruby installation
