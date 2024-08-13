@@ -12,11 +12,15 @@ mindmap: false
 mindmap2: false
 ---
 
+Got place 34 out of 36161 participants, did pretty well but could be place 11 if I didn't get a dumb penalty in the last problem.
+
+![](../images/blog/weekly-contest-410.png)
+
 ## [Snake in matrix](https://leetcode.com/problems/snake-in-matrix/description/)
 
-Problem summary: Given a $n \times n$ grid, starts from (0, 0), move like instruction, and return the cell after the last instruction.
+Problem summary: Given a `n x n` grid, starts from `(0, 0)`, move like instruction, and return the cell after the last instruction.
 
-Return the cell by calculate its id with the formula (i * n + j);
+Return the cell by calculate its id with the formula `i * n + j`;
 
 Solution: when moving on a grid (one step at a time), only x or y change by one. So we must imagine the movements in head and implement it:
 
@@ -38,7 +42,7 @@ public:
 
 ## [Count the Number of good Nodes](https://leetcode.com/problems/count-the-number-of-good-nodes/description/)
 
-Problem summary: Given a tree with $n$ nodes, count the number of **good** nodes. A node is good if all the **subtrees** rooted at its children have the same size.
+Problem summary: Given a tree with `n` nodes, count the number of **good** nodes. A node is good if all the **subtrees** rooted at its children have the same size.
 
 Solution: Obviously, for all tree problem, we should just use DFS with a template some what like this:
 
@@ -105,11 +109,11 @@ Problem summary: Too lazy, read problem statement for me please :(
 
 Solution: My experience tells me that most of the problems where we need to **count numbers of ways** to do something, it should be either a combinatorics problem or a DP problem (or both, DP combinatorics).
 
-Since I cannot think of anyway to apply combinatorics into this problem, it must be a DP problem. Notice that $n$ is only 2000, so my guess it we should implement a somewhat $O(n^2)$ DP problem.
+Since I cannot think of anyway to apply combinatorics into this problem, it must be a DP problem. Notice that `n` is only 2000, so my guess it we should implement a somewhat `O(n^2)` DP problem.
 
-Continue with using DP, so if I want to build up the array with $n$ elements, I should keep a param as **current index position**, and from the problem statement, I should keep something as **previous element that I build in the first array** (because we simply can get the second element by a minus calculation) to control the monotonic property of both array. 
+Continue with using DP, so if I want to build up the array with `n` elements, I should keep a param as **current index position**, and from the problem statement, I should keep something as **previous element that I build in the first array** (because we simply can get the second element by a minus calculation) to control the monotonic property of both array. 
 
-So I **must** keep 2 parameters like above (which should be $O(n^2)$ already) -> I need to find a way to transition DP in $O(1)$. So, after scribble for about 1 or 2 minutes, I thought of this:
+So I **must** keep 2 parameters like above (which should be `O(n^2)` already) -> I need to find a way to transition DP in `O(1)`. So, after scribble for about 1 or 2 minutes, I thought of this:
 
 ```
 1. dp(i, p1) -> dp(i, p1 + 1)
@@ -119,7 +123,7 @@ Increase the current first element by one
 If we move to the next position, we must build the first element from at least p1, or from nums[i + 1] - p2 to keep the non-increasing property for second array.
 ```
 
-So... transition $O(1)$, number of states $O(n^2)$ -> Overall $O(n^2)$
+So... transition `O(1)`, number of states `O(n^2)` -> Overall `O(n^2)`
 
 Thus I come up with the solution:
 
