@@ -15,7 +15,7 @@ mindmap2: false
 Context: So I have been able to code in Ruby because work requires it, but I found out that most of time, I just:
 - Try to find, copy and change a piece of code in the code base with the same functionality that satisfy the product requirement.
 - Use ChatGPT / Copilot to helps me finish up the code idea, review code and writing test.
-- Haven't fully understand or utilized any great thing about RUby.
+- Haven't fully understand or utilized any great thing about Ruby.
 
 That's why, I try to pick up a book about it, usually I just ask Reddit or something similar, [reference link](https://www.reddit.com/r/ruby/comments/w0ipu2/book_recommendation_to_start_ruby/). One person recommend reading "The Well-Grounded Rubyist", so I thought why don't I give it at try.
 
@@ -27,15 +27,15 @@ So this blog will mostly summarize the content of the book, and try to do as muc
 ### 1.1 Basic Ruby Language literacy
 Ruby is the interpreter, Ruby is the language \
 Use irb to mess around \
-identifier tree:
-- variables
-  - local: local variable used in a scope
-  - instance: instance variable of object, prefix with @
-  - class: class variable for class, prefix with @@
-  - global: global variable, prefix with $ \
-- constants: constants follow all cap underscore convention.
-- keywords: stuff like `def`, `if` and `__file__`
-- methods names: follow same rules and conventions as local variables (but can end with `?`, `!`, `=`)
+Identifier tree:
+- Variables
+  - Local: local variable used in a scope
+  - Instance: instance variable of object, prefix with @
+  - Class: class variable for class, prefix with @@
+  - Global: global variable, prefix with $ \
+- Constants: constants follow all cap underscore convention.
+- Keywords: stuff like `def`, `if` and `__file__`
+- Methods names: follow same rules and conventions as local variables (but can end with `?`, `!`, `=`)
 
 Usually local, instance and class all follow camel_case convention, global follow all caps underscore convention.
 
@@ -75,3 +75,33 @@ fh.close
 ```
 
 ### 1.2 Anatomy of the Ruby installation
+
+Use `irb --simple-prompt -r rbconfig` to starts `irb` with lib `rbconfig`, now use `RbConfig::CONFIG["term"]` to get the needed directory.
+
+`term` could be:
+1. `bindir`: Ruby command-line tools
+2. `rubylibdir`: provide standard lib like `uri.rb` or `fileutils.rb`
+3. `archdir`: files generated from Ruby's C-language extension, compiled into binary. Basically same with `rubylibdir` but works with any architecture because of binary format.
+4. `sitedir` and `vendordir`: third-party / code we write / tools download from internet etc.
+
+Use RubyGems to control libs and packages.
+
+### 1.3 Ruby extensions and programming libraries
+
+`load` and `require` to load code up \
+`load` can be use multiple times in a file \
+`require` (prefer) use to load all features of a file (only once)
+`require_relate` is `require` but relative to the file.
+
+### 1.4 Out-of-the-box Ruby tools and applications
+
+We have these kind of tools:
+- ruby - The interpreter
+- irb - The interactive Ruby interpreter
+- rdoc and ri - Ruby documentation tools
+- rake - Ruby make, a task-management utility
+- gem - A Ruby library and application package-management utility
+- erb - A templating system
+
+Check each tool reference for more information <(")
+
