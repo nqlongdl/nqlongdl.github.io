@@ -2,7 +2,7 @@
 layout: post
 title: How I set up my first blog
 categories: [Blog]
-description: some word here
+description: messing around
 keywords: Blog, Setting
 mermaid: false
 sequence: false
