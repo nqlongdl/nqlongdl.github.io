@@ -14,7 +14,7 @@ mindmap2: false
 
 Got place 34 out of 36161 participants, did pretty well but could be place 11 if I didn't get a dumb penalty in the last problem.
 
-![](../images/blog/weekly-contest-410.png)
+![weekly-contest-410](/images/blog/weekly-contest-410.png)
 
 ## [Snake in matrix](https://leetcode.com/problems/snake-in-matrix/description/)
 
