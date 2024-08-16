@@ -23,7 +23,9 @@ So this blog will mostly summarize the content of the book, and try to do as muc
 
 ---
 # Part 1: Ruby foundations
+
 ## Chapter 1: Bootstraping your Ruby literacy
+
 ### 1.1 Basic Ruby Language literacy
 Ruby is the interpreter, Ruby is the language \
 Use irb to mess around \
@@ -95,7 +97,7 @@ Use RubyGems to control libs and packages.
 
 ### 1.4 Out-of-the-box Ruby tools and applications
 
-We have these kind of tools:
+We have these tools in Ruby:
 - ruby - The interpreter
 - irb - The interactive Ruby interpreter
 - rdoc and ri - Ruby documentation tools
@@ -103,5 +105,9 @@ We have these kind of tools:
 - gem - A Ruby library and application package-management utility
 - erb - A templating system
 
-Check each tool reference for more information <(")
+Check each tool reference for more information
+
+## Chapter 2: Objects, methods, and local variables
+
+
 
