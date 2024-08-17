@@ -109,5 +109,7 @@ Check each tool reference for more information
 
 ## Chapter 2: Objects, methods, and local variables
 
+### 2.1 Talking to objects
 
+Ruby specify in object more than class, when created, an object instance will have a set of methods that declared from a class. However, later on, every object has the potential to "learn" behaviors (methods) that its class didn't teach it.
 
