@@ -113,3 +113,4 @@ Check each tool reference for more information
 
 Ruby specify in object more than class, when created, an object instance will have a set of methods that declared from a class. However, later on, every object has the potential to "learn" behaviors (methods) that its class didn't teach it.
 
+### 2.2 Crafting an object: the behavior of a ticket
