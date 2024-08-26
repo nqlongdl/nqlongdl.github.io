@@ -45,5 +45,15 @@ Other principles include DRY (Don't Repeat Yourself), Law of Demeter, etc.
 
 There is a correlation between use of good techniques and high-quality code. The principles of good design represent measurable truths and following them will improve the code.
 
+Best way to design is following Agile.
 
+Bad design = Bad code = Technical debt = Slow development = High cost of change = Frustration
+
+# Chapter 2: Designing Classes with a Single Responsibility
+
+Grouping methods into a class, a good easy to changes class would follow TRUE:
+- Transparent: The class should tell you what it does.
+- Reasonable: The class should do what it advertises.
+- Usable: The class should be easy to use.
+- Exemplary: The class should encourage others to use it.
 
