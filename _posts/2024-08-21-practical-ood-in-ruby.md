@@ -57,3 +57,21 @@ Grouping methods into a class, a good easy to changes class would follow TRUE:
 - Usable: The class should be easy to use.
 - Exemplary: The class should encourage others to use it.
 
+Example of a Bicycle, but we define `Gear` as the class, where gear handles multiple responsibilities -> When adding a new feature, we need to change the `Gear` class initialization, and the `Gear` class itself. This is not a good design.
+
+So if a class has many responsibilities, it will have many reasons to change. If a class has only one responsibility, it will only have one reason to change. -> Single Responsibility Principle.
+
+Tip: 
+- Make question to the class, if the class can answer the question, then it has only one responsibility.
+- Try to describe the class in one sentence, if it has "and" or "or", then it has multiple responsibilities.
+
+Cohesion: The degree to which the elements inside a module belong together. A class with high cohesion is a class that represents a single concept or a single thing.
+
+When to make decision, try to consider future cost, current cost. The "improve it now" vs "improve it later" decision tension always exists. A "good designer understands this tension and minimizes costs by making informed tradeoffs between the needs of the present and the possibilities of the future."
+
+What are tips to write code that can embrace changes:
+1. "Depend on Behavior, Not Data"
+- Instead of directly using instance variable, use methods to access the data. This way, we can change the data structure without changing the code that uses the data. Can use `attr_reader` to define the method.
+- Hide the data structure behind well-defined interfaces. So instead of directly accessing array index, we can hide it behind a method.
+2. Enforce Single Responsibility Everywhere
+- Try to extract extra responsibilities. For example, if a method traverse the whole array, do things, and return a new array -> we can extract each operation on a member into a separate method. Another example is that if a method does two things, we can extract the second thing into a separate method.
