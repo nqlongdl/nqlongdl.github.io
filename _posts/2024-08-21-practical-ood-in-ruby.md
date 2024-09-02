@@ -74,4 +74,18 @@ What are tips to write code that can embrace changes:
 - Instead of directly using instance variable, use methods to access the data. This way, we can change the data structure without changing the code that uses the data. Can use `attr_reader` to define the method.
 - Hide the data structure behind well-defined interfaces. So instead of directly accessing array index, we can hide it behind a method.
 2. Enforce Single Responsibility Everywhere
-- Try to extract extra responsibilities. For example, if a method traverse the whole array, do things, and return a new array -> we can extract each operation on a member into a separate method. Another example is that if a method does two things, we can extract the second thing into a separate method.
+- Try to extract extra responsibilities. For example, if a method traverse the whole array, do operation on each element, and return a new array -> we can extract each operation on an element into a separate method. Another example is that if a method does two things, we can extract the second thing into a separate method.
+
+The benefits of doing so are:
+1. Expose previously hidden qualities.
+2. Avoid the need for comments.
+3. Encourage reuse.
+4. Are easy to move to another class.
+
+- We can use `struct` to isolate extra responsibilities within a class, doing so will defer the decision of where the responsibility should go. Later on, we can either add extra responsibilities to the `struct`, or extract the `struct` to another class.
+
+## Summary
+The path to a changeable and maintainable code begins with classes that have a single responsibility. A class should do the smallest possible useful thing. The class should do it well, and it should do it only. It should be isolated from the changes in other classes. The class should be transparent, reasonable, usable, and exemplary. The class should be easy to change.
+
+# Chapter 3: Managing Dependencies
+
