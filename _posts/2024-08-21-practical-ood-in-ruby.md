@@ -89,3 +89,16 @@ The path to a changeable and maintainable code begins with classes that have a s
 
 # Chapter 3: Managing Dependencies
 
+Knowing will create dependencies, and dependencies will create change. The more dependencies a class has, the more likely it is to change. The more likely it is to change, the more likely it is to break. The more dependencies a class has, the harder it is to reuse in a different context.
+
+## Understanding dependencies
+
+![](/images/blog/dependencies-code.png)
+
+Some of the dependencies in the code:
+- Gear depends on the name of the class `Wheel` to initialize.
+- Name of message of `Wheel` -> Gear knows that `Wheel` can respond to `diameter` message.
+- Call to `Wheel.new` in `Gear` class -> depends on arguments of `Wheel` class.
+- Call to `Wheel.new` in `Gear` class -> depends on the order of arguments of `Wheel` class.
+
+
