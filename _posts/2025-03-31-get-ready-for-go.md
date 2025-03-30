@@ -27,6 +27,8 @@ mindmap2: false
 
 ## Website
 
-https://100go.co/
+- [https://www.alexedwards.net/blog](https://www.alexedwards.net/blog)
 
+-[https://www.thecoder.cafe/](https://www.thecoder.cafe/)
 
+- [https://100go.co/](https://100go.co/)
